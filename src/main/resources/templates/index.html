@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Projeto Estimado</title>
@@ -10,50 +11,68 @@
 </head>
 <body>
 
-	<!-- <!-- Just an image -->
-	<!-- <nav class="navbar navbar-light bg-light"> -->
-	<!--   <a class="navbar-brand" href="#"> -->
-	<!--     <img src="/images/download.jpeg" width="150" height="150" align="center"> -->
-	<!--   </a> -->
-	<!-- </nav> -->
+<nav class="navbar navbar-light" style="background-color: ">
+  <nav class="navbar navbar-dark bg-dark"> <!-- 		<div class="navbar-header"> -->
+	<a class="navbar-brand" href="#"> <img alt="Estacio"
+		src="/images/download.jpeg"  />
+	</a> </nav>
+</nav>
 
-	<nav class="navbar navbar-dark bg-dark"> <!-- 	<div class="container-fluid"> -->
-	<!-- 		<div class="navbar-header"> --> <a class="navbar-brand" href="#">
-		<img alt="Estacio" src="/images/download.jpeg" />
-	</a> <!-- 		</div> --> <!-- 	</div> --> </nav>
 
-	<form class="form-horizontal">
-		<div class="accordion" id="accordionExample">
-			<div class="card">
-				<div class="card-header" id="headingOne">
-					<h2 class="mb-0">
-						<button class="btn btn-link" type="button" data-toggle="collapse"
-							data-target="#collapseOne" aria-expanded="true"
-							aria-controls="collapseOne">Collapsible Group Item #1</button>
-					</h2>
+<form class="form-horizontal" method="POST" action="/titulos">
+<!--     	<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}"> -->
+<!--     		<span th:text="${mensagem}"> salvo com sucesso!!!</span> -->
+<!--     	</div> -->
+    
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+    			<div class="clearfix">
+	   				<h1 class="panel-title aw-titulo-panel">Novo título</h1>
+	   			</div>
+    		</div>
+    		
+    <input type=”button”/> 
+    
+  
+    
+     <button type="button" class="btn btn-primary">Colocar botao redondo</button>
+    
+    
+    		<div class="panel-body">
+				<div class="form-group">
+					<label for="descricao" class="col-sm-2 control-label">Descrição</label>
+					<div class="col-sm-4"> 
+						<input type="text" class="form-control" id="descricao" name="descricao"/>
+					</div>
 				</div>
-	</form>
-
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+				<div class="form-group">
+					<label for="dataVencimento" class="col-sm-2 control-label">Data de vencimento</label>
+					<div class="col-sm-2">  
+						<input type="text" class="form-control"	id="dataVencimento" name="dataVencimento"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="valor" class="col-sm-2 control-label">Valor</label>
+					<div class="col-sm-2">   
+						<input type="text" class="form-control" id="valor" name="valor"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="status" class="col-sm-2 control-label">Status</label>
+					<div class="col-sm-2">
+						<select class="form-control" name="status">
+							<option th:each="status : ${todosStatusTitulo}" th:value="${status}" th:text="${status.descricao}"></option>
+                    	</select>
+                    </div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">Salvar</button>
+					</div>
+				</div>
+			</div>
+    	</div>
+    </form>
 
 
 	<script src="/js/boostrap.min.js"></script>
