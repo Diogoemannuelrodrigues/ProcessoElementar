@@ -1,11 +1,11 @@
 .navbar-brand {
-	margin-left: 34px;
-	margin-right: 34px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .form-control {
-	margin-left: 25px;	
-	margin-right: 25px;	
+	margin-left: auto;	
+	margin-right: auto;	
 }
 
 /* .panel-default { */

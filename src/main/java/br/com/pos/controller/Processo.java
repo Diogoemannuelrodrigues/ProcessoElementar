@@ -3,7 +3,6 @@ package br.com.pos.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,7 +28,7 @@ public class Processo {
 		return "teste";
 	}
 	
-	@RequestMapping("/all")
+	@GetMapping("/all")
 	public List<ProcessoElementar> processos() {
 		return repo.findAll();
 	}
