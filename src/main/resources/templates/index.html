@@ -14,15 +14,25 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-light" style="background-color: "> 
-	<a class="navbar-brand" href="#"> <img alt="Estacio"
-		src="/images/download.jpeg" width="170" height="120"/>
-	</a> </nav> </nav>
+	<nav class="navbar navbar-light" style="background-color: "> <a
+		class="navbar-brand" href="#"> <img alt="Estacio"
+		src="/images/download.jpeg" width="170" height="120" />
+	</a> </nav>
+	</nav>
 
 	<br><br>
 
 
 			<form method="POST" action="/novos">
+
+<!-- 				<div class="alert alert-warning alert-dismissible fade show" th:if="$strings."> -->
+<!-- 					<strong>Adicionado com sucesso!</strong>  -->
+<!-- 					<button type="button" class="close" data-dismiss="alert" -->
+<!-- 						aria-label="Close"> -->
+<!-- 						<span aria-hidden="true">&times;</span> -->
+<!-- 					</button> -->
+<!-- 				</div> SO adicionar quando for cadastrado-->
+
 				<div class="accordion" id="accordionExample">
 					<div class="card">
 						<div class="card-header" id="headingOne">Processo Elementar
@@ -52,7 +62,8 @@
 							<div class="card-body">
 
 								<div class="col-sm-offset-2 col-sm-10">
-										<button type="submit" class="btn btn-outline-primary"> Salvar</button>
+									<button type="submit" class="btn btn-outline-primary">
+										Salvar</button>
 								</div>
 							</div>
 						</div>

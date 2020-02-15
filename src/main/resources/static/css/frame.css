@@ -8,8 +8,8 @@
 }
 
 .card{
-    margin-left : 70px;
-    margin-right : 70px;
+    margin-left : 50px;
+    margin-right : 50px;
 }
 
 .card-body {
@@ -31,4 +31,11 @@
 
 .form-group2 {
     margin-left: 900px  
+}
+
+.alert-warning {
+	margin-left: 50px; 
+	margin-right: 50px;
+	background:  #ffffff;
+	
 }

@@ -10,9 +10,14 @@ public enum Sigla {
 
 	private Sigla(String texto,int valor) {
 		this.valor = valor;
+		this.texto = texto;
 	} 
 
 	public int getValor() {
 		return valor;
+	}
+	
+	public String getTexto() {
+		return this.texto;
 	}
 }

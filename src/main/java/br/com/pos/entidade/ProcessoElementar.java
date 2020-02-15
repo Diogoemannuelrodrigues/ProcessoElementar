@@ -13,8 +13,10 @@ public class ProcessoElementar {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	@Column
 	private String descricao;
+	
 	@Enumerated
 	private Sigla sigla;
 
