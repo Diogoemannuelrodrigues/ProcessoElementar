@@ -1,89 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Processo Elementar</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/frame.css">
-     <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/frame.css">
+			<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-light" style="background-color: ">
-  <nav class="navbar navbar-dark bg-dark"> <!-- 		<div class="navbar-header"> -->
-	<a class="navbar-brand" href="#"> <img alt="Estacio" src="/images/download.jpeg"  />
-	</a> </nav>
-</nav>
+	<nav class="navbar navbar-light" style="background-color: "> 
+	<a class="navbar-brand" href="#"> <img alt="Estacio"
+		src="/images/download.jpeg" width="170" height="120"/>
+	</a> </nav> </nav>
+
+	<br><br>
+
+
+			<form method="POST" action="/novos">
+				<div class="accordion" id="accordionExample">
+					<div class="card">
+						<div class="card-header" id="headingOne">Processo Elementar
+						</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<div class="col-sm-3">
+									<br><br> <input type="text" class="form-control"
+											id="descricao" name="descricao" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-2">
+									<select class="form-control">
+										<option>ALI</option>
+										<option>AIE</option>
+										<option>EE</option>
+										<option>CE</option>
+										<option>SE</option>
+								</div>
+								</select>
+							</div>
+						</div>
+						<div id="collapseOne" class="collapse show"
+							aria-labelledby="headingOne" data-parent="#accordionExample">
+							<div class="card-body">
+
+								<div class="col-sm-offset-2 col-sm-10">
+										<button type="submit" class="btn btn-outline-primary"> Salvar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+			</form> <br><br>
+
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<button class="btn btn-outline-primary">Adicionados</button>
+							<br><br>
 
 
 
-<br><br>
-    
-   
- 
-<form class="form-horizontal" method="POST" action="/titulos">
-    <div class="accordion" id="accordionExample">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-            Processo Elementar    
-        </div>
-        <div class="panel-body">
-        <div class="form-group">
-          <div class="col-sm-3"> 
-          <br><br>
-            <input type="text" class="form-control" id="descricao" name="descricao"/>
-          </div>
-        </div>
-       
-            <div class="form-group">
-          <div class="col-sm-2">
-           <select class="form-control">
-               <option>ALI</option>
-               <option>AIE</option>
-               <option>EE</option>
-               <option>CE</option>
-               <option>SE</option>
-           </div>
-           </select>
-        </div>
-    </div>       
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body">
-        
-                <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-outline-primary">Adicionar</button>
-              </div>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-
-</form>  
-                  <br><br>
-
-    <div class="card">
-        <div class="card-header" id="headingOne">
-              <button class="btn btn-outline-primary">Adicionados</button><br><br>
-
-      
-       
-        <div class="form-group2">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-outline-primary">Imprimir</button>
-          </div>
-        </div>
-     
-
-
-<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
-<script type="text/javascript" src="js/popper.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<!--baixar o jquery-3.2.1.slim.min.js e o popper.min.js-->
+									<div class="form-group2">
+										<div class="col-sm-offset-2 col-sm-10">
+											<button type="submit" class="btn btn-outline-primary">Imprimir</button>
+										</div>
+									</div> <script type="text/javascript"
+										src="js/jquery-3.2.1.slim.min.js"></script> <script
+										type="text/javascript" src="js/popper.min.js"></script> <script
+										type="text/javascript" src="js/bootstrap.js"></script> <!--baixar o jquery-3.2.1.slim.min.js e o popper.min.js-->
 </body>
 </html>
 
