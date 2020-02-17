@@ -2,6 +2,7 @@ package br.com.pos.entidade;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,6 +20,9 @@ public class ProcessoElementar {
 	
 	@Enumerated
 	private Sigla sigla;
+
+	@Column
+	private int quantidade; 
 
 	public ProcessoElementar() {
 
@@ -49,6 +53,14 @@ public class ProcessoElementar {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
 	}
 
 	public Sigla getSigla() {

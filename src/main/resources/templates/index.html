@@ -16,14 +16,15 @@
 
 	<nav class="navbar navbar-light" style="background-color: "> <a
 		class="navbar-brand" href="#"> <img alt="Estacio"
-		src="/images/download.jpeg" width="170" height="120" />
+		src="/images/download.jpeg" width="200" height="120" />
 	</a> </nav>
 	</nav>
 
 	<br><br>
 
 
-			<form method="POST" action="/novos">
+			<form method="POST" action="save">
+			
 
 <!-- 				<div class="alert alert-warning alert-dismissible fade show" th:if="$strings."> -->
 <!-- 					<strong>Adicionado com sucesso!</strong>  -->
@@ -78,7 +79,36 @@
 							<button class="btn btn-outline-primary">Adicionados</button>
 							<br><br>
 
+							<table class="table">
+								<thead class="thead-dark">
+								  <tr>
+									<th scope="col">ID</th>
+									<th scope="col">Descrição</th>
+									<th scope="col">Tipo</th>
+									<th scope="col">Quantidade</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr th:each="processo : ${processos}">
+<!-- 								    <button class="btn btn-primary" type="submit">Editar</button>  ARUUMAR ISSO           -->
+<!-- 									//<th scope="row">1</th> -->
+									
+									<td><span th:text="${processo.descricao}"></span></td>
+									<td><span th:text="${processo.sigla}"></span></td>
+									<td><span th:text="${processo.quantidade}"></span></td>
+	
+<!-- 									<td>Otto</td> -->
+<!-- 									<td>@mdo</td> -->
+								  </tr>								  
+								</td>
+								
+								</tbody>
+								
+							  </table>
+							  
 
+
+<hr></hr>
 
 									<div class="form-group2">
 										<div class="col-sm-offset-2 col-sm-10">
