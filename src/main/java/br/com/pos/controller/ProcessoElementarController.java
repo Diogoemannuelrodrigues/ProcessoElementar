@@ -1,5 +1,7 @@
 package br.com.pos.controller;
 
+import java.lang.ProcessBuilder.Redirect;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +20,7 @@ public class ProcessoElementarController {
 	@Autowired
 	private ProcessoElementarRepository repo;
 
-	@RequestMapping("/")
+	@RequestMapping("/processoElementar")
 	public String telaInicial() {
 		return "index";
 	}
@@ -26,10 +28,10 @@ public class ProcessoElementarController {
 	@PostMapping(value = "save")
 	public String saveProcesso(ProcessoElementar processo) {
 		repo.save(processo);
-		return "index";
+		return "redirect:/processoElementar";
 	}
 
-	@GetMapping("/")
+	@GetMapping("/processoElementar")
 	public ModelAndView listaProssos() {
 		ModelAndView mav = new ModelAndView("index");
 		mav.addObject("processos", repo.findAll());
@@ -40,7 +42,7 @@ public class ProcessoElementarController {
 	public String remove(ProcessoElementar processo) {
 //		Object ob = repo.findById(processo.getId());
 		repo.deleteById(processo.getId());
-		return null;
+		return "index";
 	}
 	
 

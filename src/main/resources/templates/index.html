@@ -21,103 +21,103 @@
 	</nav>
 
 	<br><br>
+	<form method="POST" action="save">
 
 
-			<form method="POST" action="save">
-			
+		<!-- 				<div class="alert alert-warning alert-dismissible fade show" th:if="$strings."> -->
+		<!-- 					<strong>Adicionado com sucesso!</strong>  -->
+		<!-- 					<button type="button" class="close" data-dismiss="alert" -->
+		<!-- 						aria-label="Close"> -->
+		<!-- 						<span aria-hidden="true">&times;</span> -->
+		<!-- 					</button> -->
+		<!-- 				</div> SO adicionar quando for cadastrado-->
 
-<!-- 				<div class="alert alert-warning alert-dismissible fade show" th:if="$strings."> -->
-<!-- 					<strong>Adicionado com sucesso!</strong>  -->
-<!-- 					<button type="button" class="close" data-dismiss="alert" -->
-<!-- 						aria-label="Close"> -->
-<!-- 						<span aria-hidden="true">&times;</span> -->
-<!-- 					</button> -->
-<!-- 				</div> SO adicionar quando for cadastrado-->
-
-				<div class="accordion" id="accordionExample">
-					<div class="card">
-						<div class="card-header" id="headingOne">Processo Elementar
+		<div class="accordion" id="accordionExample">
+			<div class="card">
+				<div class="card-header" id="headingOne">Processo Elementar</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<div class="col-sm-3">
+							<br><br> <input type="text" class="form-control"
+									id="descricao" name="descricao" />
 						</div>
-						<div class="panel-body">
-							<div class="form-group">
-								<div class="col-sm-3">
-									<br><br> <input type="text" class="form-control"
-											id="descricao" name="descricao" />
-								</div>
-							</div>
+					</div>
 
-							<div class="form-group">
-								<div class="col-sm-2">
-									<select class="form-control">
-										<option>ALI</option>
-										<option>AIE</option>
-										<option>EE</option>
-										<option>CE</option>
-										<option>SE</option>
-								</div>
-								</select>
-							</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+
+							<td><select name="sigla">
+									<option
+										th:each="siglaOpt : ${T(br.com.pos.entidade.Sigla).values()}"
+										th:value="${siglaOpt}" th:text="${siglaOpt.texto}">
+									</option>
+							</select></td>
+
 						</div>
-						<div id="collapseOne" class="collapse show"
-							aria-labelledby="headingOne" data-parent="#accordionExample">
-							<div class="card-body">
+					</div>
+					<div id="collapseOne" class="collapse show"
+						aria-labelledby="headingOne" data-parent="#accordionExample">
+						<div class="card-body">
 
-								<div class="col-sm-offset-2 col-sm-10">
-									<button type="submit" class="btn btn-outline-primary">
-										Salvar</button>
-								</div>
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-outline-primary">
+									Salvar</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				</div>
+			</div>
+		</div>
 
-			</form> <br><br>
+	</form>
+	<br><br>
 
-					<div class="card">
-						<div class="card-header" id="headingOne">
-							<button class="btn btn-outline-primary">Adicionados</button>
-							<br><br>
+			<div class="card">
+				<div class="card-header" id="headingOne">
+					<button class="btn btn-outline-primary">Adicionados</button>
+					<br><br>
 
 							<table class="table">
 								<thead class="thead-dark">
-								  <tr>
-									<th scope="col">ID</th>
-									<th scope="col">Descrição</th>
-									<th scope="col">Tipo</th>
-									<th scope="col">Quantidade</th>
-								  </tr>
+									<tr>
+										<th scope="col">ID</th>
+										<th scope="col">Descrição</th>
+										<th scope="col">Tipo</th>
+										<th scope="col">Quantidade</th>
+										<th scope="col">Ação</th>
+									</tr>
 								</thead>
 								<tbody>
-								  <tr th:each="processo : ${processos}">
-<!-- 								    <button class="btn btn-primary" type="submit">Editar</button>  ARUUMAR ISSO           -->
-<!-- 									//<th scope="row">1</th> -->
-									
-									<td><span th:text="${processo.descricao}"></span></td>
-									<td><span th:text="${processo.sigla}"></span></td>
-									<td><span th:text="${processo.quantidade}"></span></td>
-	
-<!-- 									<td>Otto</td> -->
-<!-- 									<td>@mdo</td> -->
-								  </tr>								  
-								</td>
-								
+									<tr th:each="processo : ${processos}">
+										<!-- 								    <button class="btn btn-primary" type="submit">Editar</button>  ARUUMAR ISSO           -->
+										<!-- 									//<th scope="row">1</th> -->
+
+										<td><span th:text="${processo.id}"></span></td>
+										<td><span th:text="${processo.descricao}"></span></td>
+										<td><span th:text="${processo.sigla}"></span></td>
+										<td><span th:text="${processo.quantidade}"></span></td>
+										<td><button class="btn btn-danger" type="submit">Excluir</button></td>
+
+										<!-- 									<td>Otto</td> -->
+										<!-- 									<td>@mdo</td> -->
+									</tr>
+									</td>
+
 								</tbody>
-								
-							  </table>
-							  
+
+							</table>
 
 
-<hr></hr>
 
-									<div class="form-group2">
-										<div class="col-sm-offset-2 col-sm-10">
-											<button type="submit" class="btn btn-outline-primary">Imprimir</button>
-										</div>
-									</div> <script type="text/javascript"
-										src="js/jquery-3.2.1.slim.min.js"></script> <script
-										type="text/javascript" src="js/popper.min.js"></script> <script
-										type="text/javascript" src="js/bootstrap.js"></script> <!--baixar o jquery-3.2.1.slim.min.js e o popper.min.js-->
+							<hr></hr>
+
+							<div class="form-group2">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-outline-primary">Imprimir</button>
+								</div>
+							</div> <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+							<script type="text/javascript" src="js/popper.min.js"></script> <script
+								type="text/javascript" src="js/bootstrap.js"></script> <!--baixar o jquery-3.2.1.slim.min.js e o popper.min.js-->
 </body>
 </html>
 

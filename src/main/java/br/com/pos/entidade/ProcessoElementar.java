@@ -18,7 +18,7 @@ public class ProcessoElementar {
 	@Column
 	private String descricao;
 	
-	@Enumerated
+	@Enumerated(EnumType.STRING)
 	private Sigla sigla;
 
 	@Column
@@ -69,6 +69,7 @@ public class ProcessoElementar {
 
 	public void setSigla(Sigla sigla) {
 		this.sigla = sigla;
+		this.setQuantidade(sigla.getValor());
 	}
 
 	@Override
