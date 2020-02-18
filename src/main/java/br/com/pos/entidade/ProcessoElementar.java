@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.sun.istack.NotNull;
+
 @Entity
 public class ProcessoElementar {
 
@@ -16,6 +18,7 @@ public class ProcessoElementar {
 	private Long id;
 	
 	@Column
+	@NotNull
 	private String descricao;
 	
 	@Enumerated(EnumType.STRING)
@@ -23,7 +26,13 @@ public class ProcessoElementar {
 
 	@Column
 	private int quantidade; 
-
+	
+//	private Integer total;
+//	
+//	public Integer totalDePontos() {
+//		return this.total=+total;
+//	}
+	
 	public ProcessoElementar() {
 
 	}

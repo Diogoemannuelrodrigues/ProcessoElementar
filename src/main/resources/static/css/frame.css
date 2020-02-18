@@ -16,18 +16,12 @@
     margin-left: 5px
 }
 
-.dropdown{
-    margin-left: 40px
-}
-
 .form-control {
     margin-left: 25px;
     border: px solid #ced4da;
 }
 
-.form-group {
-    margin-left:  
-}
+
 
 .form-group2 {
     margin-left: 900px  
@@ -38,4 +32,14 @@
 	margin-right: 50px;
 	background:  #ffffff;
 	
+}
+
+.processo-layout {
+	margin-top: 30px;
+}
+
+.processo-botao {
+	padding-left: 20px;
+    display: flex;
+    align-items: center;
 }
